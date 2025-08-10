@@ -40,7 +40,7 @@ const CalcularDistanciaConGeocoding = () => {
       setcordenadasDestino(coordsDestino);
 
       // 2. Hacer consulta a OSRM con esas coordenadas
-      const urlOsrm = `http://router.project-osrm.org/route/v1/driving/${coordsOrigen.lon},${coordsOrigen.lat};${coordsDestino.lon},${coordsDestino.lat}?overview=false`;
+      const urlOsrm = `https://router.project-osrm.org/route/v1/driving/${coordsOrigen.lon},${coordsOrigen.lat};${coordsDestino.lon},${coordsDestino.lat}?overview=false`;
       const resOsrm = await fetch(urlOsrm);
       const dataOsrm = await resOsrm.json();
 
