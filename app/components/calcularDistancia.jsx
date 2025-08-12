@@ -78,17 +78,17 @@ const CalcularDistanciaConGeocoding = () => {
   };
 
   return (
-   <div className="relative min-h-screen font-sans text-gray-800">
-  {/* MAPA DE FONDO */}
+  <div className="relative min-h-screen font-sans bg-slate-50 text-gray-800">
+  {/* MAPA DE FONDO ocupa toda la pantalla */}
   {cordenadasorigen && cordenadasdestino && (
-    <div className="absolute inset-0 -z-10">
+    <div className="w-screen h-screen">
       <Mapa origen={cordenadasorigen} destino={cordenadasdestino} />
     </div>
   )}
 
-  {/* FORMULARIO */}
-  <div className="flex items-center justify-center min-h-screen p-4 sm:p-6">
-    <div className="w-full max-w-lg p-6 sm:p-8 bg-white bg-opacity-90 rounded-lg shadow-lg backdrop-blur-sm">
+  {/* FORMULARIO en posición absoluta, flotando sobre el mapa */}
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-[9999] w-full max-w-lg p-4 pointer-events-auto">
+    <div className="bg-white/40 p-6 rounded-lg shadow-lg backdrop-blur-sm pointer-events-auto">
       <h2 className="text-xl sm:text-2xl font-semibold text-center mb-6">
         Calculadora de Distancia con Geocoding
       </h2>
@@ -143,6 +143,7 @@ const CalcularDistanciaConGeocoding = () => {
     </div>
   </div>
 </div>
+
 
   );
 };

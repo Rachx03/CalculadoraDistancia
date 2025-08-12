@@ -1,11 +1,21 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Polyline } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Polyline, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect } from "react";
 
-// Para que los íconos se muestren bien en React + Leaflet
+// Componente para ajustar la vista al cambiar bounds
+const AjustarVistaMapa = ({ bounds }) => {
+  const map = useMap();
+
+  if (bounds) {
+    map.fitBounds(bounds, { padding: [50, 50] });
+  }
+
+  return null;
+};
+
+// Configurar íconos de Leaflet para que se vean bien en React
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -17,18 +27,18 @@ L.Icon.Default.mergeOptions({
 });
 
 const Mapa = ({ origen, destino }) => {
-  // Las coordenadas que recibes tienen lat y lon en string, conviértelos a números y en formato [lat, lon]
   const positionOrigen = [parseFloat(origen.lat), parseFloat(origen.lon)];
   const positionDestino = [parseFloat(destino.lat), parseFloat(destino.lon)];
 
-  // Centro del mapa entre ambos puntos (simple promedio)
   const center = [
     (positionOrigen[0] + positionDestino[0]) / 2,
     (positionOrigen[1] + positionDestino[1]) / 2,
   ];
 
-  // Línea que conecta los dos puntos
   const polylinePositions = [positionOrigen, positionDestino];
+
+  // Bounds que abarcan ambos puntos
+  const bounds = [positionOrigen, positionDestino];
 
   return (
     <MapContainer
@@ -44,8 +54,10 @@ const Mapa = ({ origen, destino }) => {
       <Marker position={positionOrigen} />
       <Marker position={positionDestino} />
       <Polyline positions={polylinePositions} color="blue" />
+      <AjustarVistaMapa bounds={bounds} />
     </MapContainer>
   );
 };
 
 export default Mapa;
+
