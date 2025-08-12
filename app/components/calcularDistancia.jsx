@@ -141,6 +141,10 @@ const CalcularDistanciaConGeocoding = () => {
         <p className="mt-4 text-center text-red-600 font-medium">{error}</p>
       )}
     </div>
+  
+  </div>
+   <div className="absolute bottom-4 left-4 z-[9999] text-gray-600 text-xs select-none bg-white/30 backdrop-blur-sm rounded px-2 py-1">
+    © 2025 Rachel García Betancourt. Todos los derechos reservados.
   </div>
 </div>
 
