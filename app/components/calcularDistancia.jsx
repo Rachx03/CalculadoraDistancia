@@ -96,14 +96,14 @@ const CalcularDistanciaConGeocoding = () => {
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <input
           type="text"
-          placeholder="Dirección origen"
+          placeholder="Montevideo, Uruguay"
           value={origen}
           onChange={(e) => setOrigen(e.target.value)}
           className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
         />
         <input
           type="text"
-          placeholder="Dirección destino"
+          placeholder="Buenos Aires, Argentina"
           value={destino}
           onChange={(e) => setDestino(e.target.value)}
           className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
