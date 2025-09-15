@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
 title: "Calculadora de Distancias en Mapa",
-  description: "Calcula distancias entre direcciones fácilmente y visualízalas en un mapa interactivo. Usa geocoding con OpenStreetMap y rutas optimizadas con OSRM. Ideal para planificar viajes y ubicaciones.",
+  description: "Calcula la distancia en línea recta entre dos direcciones usando geocoding y muestra la conexión directa en un mapa interactivo con OpenStreetMap.",
   keywords: "calculadora de distancias, mapa interactivo, geolocalización, OpenStreetMap, rutas, OSRM, geocoding, planificación de viajes",
   author: "Rachel García Betancourt",
   viewport: "width=device-width, initial-scale=1",
     openGraph: {
     title: "Calculadora de Distancias ",
     description:
-      "Calcula distancias entre direcciones con geocoding y muestra rutas en un mapa con OpenStreetMap y OSRM. Ideal para planificar viajes y ubicaciones.",
+      "Calcula la distancia en línea recta entre dos direcciones usando geocoding y muestra la conexión directa en un mapa interactivo con OpenStreetMap.",
     url: "https://calculador-de-distancia-1a4e2.firebaseapp.com/",
     siteName: "Calculadora de Distancias",
     images: [
       {
-        url: "https://calculador-de-distancia-1a4e2.firebaseapp.com/",
+        url: "https://i.ibb.co/fYj3RdWQ/image.png",
         width: 1200,
         height: 630,
         alt: "Calculadora de Distancias Logo",
@@ -36,12 +36,12 @@ title: "Calculadora de Distancias en Mapa",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@TuTwitter",
-    creator: "@TuTwitter",
+    site: "@RachelGB030522",
+    creator: "@RachelGB030522",
     title: "Calculadora de Distancias - Visualiza rutas en mapa interactivo",
     description:
-      "Calcula distancias entre direcciones con geocoding y muestra rutas en un mapa con OpenStreetMap y OSRM. Ideal para planificar viajes y ubicaciones.",
-    images: ["https://calculador-de-distancia-1a4e2.firebaseapp.com/"],
+      "Calcula la distancia en línea recta entre dos direcciones usando geocoding y muestra la conexión directa en un mapa interactivo con OpenStreetMap.",
+    images: ["https://i.ibb.co/fYj3RdWQ/image.png"],
   },
 };
 
